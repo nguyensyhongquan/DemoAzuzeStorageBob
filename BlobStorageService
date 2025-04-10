@@ -6,7 +6,8 @@
      public BlobStorageService(IConfiguration configuration)
      {
          _connectionString = configuration.GetValue<string>("AzureStorage:ConnectionString");
-         _containerName = "avater";
+         _containerName = "avater";//lưu trữ ảnh 
+//containerName có thể thay thế ="videocourse" (dùng để lưu trữ video )
      }
 
      public async Task<string> UploadFileAsync(Stream fileStream, string fileName)
